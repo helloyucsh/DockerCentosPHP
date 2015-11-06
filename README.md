@@ -31,11 +31,11 @@ or to assign a random port that maps to port 80 on the container:
 
 Initialize a new ~/var/www/html
 
-docker run --rm=true --volumes-from=~/var/www/html  <username>/php
+# docker run --rm=true --volumes-from=~/var/www/html  <username>/php
 
 Run the current /var/www/html
 
-$> docker run -d --volumes-from=~/var/www/html <username>/php
+#  docker run -d --volumes-from=~/var/www/html <username>/php
 
 To the port that the container is listening on:
 
