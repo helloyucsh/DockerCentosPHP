@@ -8,7 +8,9 @@ RUN yum -y update && yum clean all
 RUN yum -y install httpd && yum clean all
 RUN yum -y install php && yum clean all
 RUN yum -y install php-mbstring &&  yum clean all
+RUN yum -y gd mbstring pdo pdo_mysql pdo_pgsql zip  &&  yum clean all
 RUN yum -y install php-mysql &&  yum clean all
+RUN yum -y install procps &&  yum clean all
 
 VOLUME /var/www/html
 
