@@ -4,9 +4,10 @@ LABEL Vendor="CentOS"
 LABEL License=GPLv2
 LABEL Version=2.4.6-31
 RUN yum -y install http://rpms.famillecollet.com/enterprise/remi-release-7.rpm && yum clean all
+COPY remi*  /etc/yum.repos.d/
 RUN yum -y update && yum clean all
 RUN yum -y install httpd && yum clean all
-RUN yum -y install php  --enablerepo=remi && yum clean all
+RUN yum -y install php  && yum clean all
 RUN yum -y install php-mbstring &&  yum clean all
 RUN yum -y install gd mbstring pdo pdo_mysql pdo_pgsql zip  &&  yum clean all
 RUN yum -y install php-mysql &&  yum clean all
